@@ -5,9 +5,14 @@ let subhanallahInitialValue = 0;
 
 const subhanallahIncreBtn = document.getElementById('subhanallahIncrementBtn');
 subhanallahIncreBtn.addEventListener('click', function(){
-    subhanallahInitialValue = subhanallahInitialValue + 1;
+    if(subhanallahInitialValue === 33){
+        return alert('Subhanallah Complete. please another one.')
+    }else{
+        subhanallahInitialValue = subhanallahInitialValue + 1;
     const subhanallahCounter = document.getElementById('subhanallahCount');
     subhanallahCounter.innerText = subhanallahInitialValue
+    }
+    
         
 })
 
@@ -32,11 +37,13 @@ let alhamdulillahInitialValue = 0;
 
 const alhamdulillahIncreBtn = document.getElementById('alhamdulillahIncrementBtn');
 alhamdulillahIncreBtn.addEventListener('click', function(){
-    alhamdulillahInitialValue += 1;
+    if(alhamdulillahInitialValue === 33){
+        return alert('Alhamdulillah complete. please another one.')
+    }else{
+        alhamdulillahInitialValue += 1;
     const alhamdulillahCounter = document.getElementById('alhamdulillahCount');
     alhamdulillahCounter.innerText = alhamdulillahInitialValue;
-   
-
+    }
 })
 
 
@@ -55,6 +62,9 @@ alhamdulillahDecreBtn.addEventListener('click', function(){
 let allahCountValue = 0;
 const allahIncrementBtn = document.getElementById('allahIncrementBtn');
 allahIncrementBtn.addEventListener('click', function(){
+    if(allahCountValue === 34){
+        return alert('Allah is complete. All done. you can start from first again.')
+    }
     allahCountValue += 1;
     const allahCounter = document.getElementById('allahCount');
     allahCounter.innerText =  allahCountValue;
@@ -69,7 +79,17 @@ allahDecrementBtn.addEventListener('click',function(){
     const allahCounter = document.getElementById('allahCount');
     allahCounter.innerText = allahCountValue;
     }
-    
+})
+
+// Reset Button
+const resetBttn = document.getElementById('resetBtn');
+resetBttn.addEventListener('click', function(){
+    subhanallahCount.innerText = 0;
+    alhamdulillahCount.innerText = 0;
+    allahCount.innerText = 0;
+    subhanallahInitialValue = 0;
+    alhamdulillahInitialValue = 0;
+    allahCountValue = 0;
 
 })
 
